@@ -1,4 +1,4 @@
-package com.example.petshop
+package com.example.petshop.ui_app
 
 
 import android.os.Bundle
@@ -24,5 +24,5 @@ class MainActivity : ComponentActivity() {
 @Preview(showBackground = true)
 @Composable
 fun GreetingPreview() {
-    Greeting()
+    HomeScreen()
 }
