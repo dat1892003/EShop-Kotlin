@@ -83,10 +83,10 @@ fun HomeScreen() {
 
 
         if(selectedTab!=0){
-            Spacer(modifier = Modifier.height(8.dp))
             TopBar(cartCount = cartCount)
             Spacer(modifier = Modifier.height(8.dp))
             SearchAndFilters()
+            Spacer(modifier = Modifier.height(8.dp))
             CategoryRow(categories = categories, selectedCategory = selectedCategory, onSelect = { selectedCategory = it })}
         else{
             CartScreen()
