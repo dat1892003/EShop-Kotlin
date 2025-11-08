@@ -82,7 +82,11 @@ fun HomeScreen() {
         Spacer(modifier = Modifier.height(8.dp))
         SearchAndFilters()
         Spacer(modifier = Modifier.height(8.dp))
-        CategoryRow(categories = categories, selectedCategory = selectedCategory, onSelect = { selectedCategory = it })
+        if(selectedTab==0){
+        CategoryRow(categories = categories, selectedCategory = selectedCategory, onSelect = { selectedCategory = it })}
+        else{
+            CartScreen()
+        }
         Spacer(modifier = Modifier.height(8.dp))
         Row(
             modifier = Modifier
