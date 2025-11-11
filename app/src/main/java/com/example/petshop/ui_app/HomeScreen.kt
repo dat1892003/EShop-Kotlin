@@ -70,7 +70,9 @@ fun HomeScreen() {
             Product(3, "Áo Phao Nam", null, 4.0, 750000, null, "Mới"),
             Product(4, "Giày Thể Thao", null, 4.2, 650000, 820000, "-20%"),
             Product(5, "Váy Xòe", null, 4.8, 520000, 780000, null),
+            Product(6, "Túi Xách Thời Trang", null, 4.6, 330000, 450000, "-27%"),
             Product(6, "Túi Xách Thời Trang", null, 4.6, 330000, 450000, "-27%")
+
         )
     }
 
