@@ -186,6 +186,9 @@ fun SummarySection(subtotal: Double, shipping: Double, total: Double) {
         SummaryRow("Phí vận chuyển", shipping)
         Divider(modifier = Modifier.padding(vertical = 8.dp))
         SummaryRow("Tổng cộng", total, highlight = true)
+        Button(onClick = { /*TODO*/ }, modifier = Modifier.fillMaxWidth().padding(5.dp)) {
+            Text(text = "Thanh toán")
+        }
     }
 }
 
