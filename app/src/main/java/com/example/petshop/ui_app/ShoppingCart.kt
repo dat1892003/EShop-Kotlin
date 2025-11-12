@@ -139,21 +139,19 @@ fun CartItemCard(
                 fontWeight = FontWeight.Bold,
                 modifier = Modifier.padding(top = 4.dp)
             )
-        }
-
-        Column(horizontalAlignment = Alignment.CenterHorizontally) {
-            IconButton(onClick = { onQuantityChange(item.quantity + 1) }) {
-                Icon(Icons.Default.Add, contentDescription = "Tăng")
+            Row(verticalAlignment = Alignment.CenterVertically, modifier = Modifier.align(Alignment.End)) {
+                IconButton(onClick = { onQuantityChange(item.quantity + 1) }) {
+                    Icon(Icons.Default.Add, contentDescription = "Tăng")
+                }
+                Text("${item.quantity}")
+                IconButton(
+                    onClick = { if (item.quantity > 1) onQuantityChange(item.quantity - 1) }
+                ) {
+                    Icon(Icons.Default.Remove, contentDescription = "Giảm")
+                }
             }
-            Text("${item.quantity}")
-            IconButton(
-                onClick = { if (item.quantity > 1) onQuantityChange(item.quantity - 1) }
-            ) {
-                Icon(Icons.Default.Remove, contentDescription = "Giảm")
-            }
         }
-
-        IconButton(onClick = onRemove) {
+        IconButton(onClick = onRemove, modifier = Modifier.align(Alignment.Top)) {
             Icon(Icons.Default.Delete, contentDescription = "Xóa", tint = Color.Gray)
         }
     }
