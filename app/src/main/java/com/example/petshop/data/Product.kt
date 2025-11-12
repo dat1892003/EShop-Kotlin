@@ -1,5 +1,11 @@
 package com.example.petshop.data
+
 import com.google.gson.annotations.SerializedName
+
+data class Rating(
+    @SerializedName("rate"  ) var rate  : Double? = null,
+    @SerializedName("count" ) var count : Int?    = null
+)
 
 data class Product(
     @SerializedName("id"          ) var id          : Int?    = null,
